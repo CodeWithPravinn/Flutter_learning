@@ -47,18 +47,22 @@ class _MyHomePageState extends State<MyHomePage> {
     //     appBar: AppBar(
     //     title: Text('Flutter555'),
     // ),
-    body: ListView.separated(itemBuilder: (context, index) {
-      return ListTile(
-        leading: Text('${index+1}'),
-        title: Text(names[index]),
-        subtitle: Text('9313329237'),
-        trailing: Icon(Icons.add),
-      );
-    },
-    itemCount: names.length,
-    separatorBuilder: (context, index) {
-    return Divider(height: 50,thickness: 3,);
-    },
+    body: Card(
+      elevation: 10,
+      child: ListView.separated(itemBuilder: (context, index) {
+        return ListTile(
+          hoverColor: Colors.deepOrange,
+          leading: Text('${index+1}'),
+          title: Text(names[index]),
+          subtitle: Text('9313329237'),
+          trailing: Icon(Icons.add),
+        );
+      },
+      itemCount: names.length,
+      separatorBuilder: (context, index) {
+      return Divider(height: 50,thickness: 3,);
+      },
+      ),
     )
 
 
