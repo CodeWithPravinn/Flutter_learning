@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:start_flutter/Animated_container.dart';
 import 'package:start_flutter/Callback_Function.dart';
 import 'package:start_flutter/Card.dart';
 import 'package:start_flutter/DatePicker.dart';
 import 'package:start_flutter/Fontawosome_Icons.dart';
 import 'package:start_flutter/GridLayout.dart';
 import 'package:start_flutter/ListTile.dart';
+import 'package:start_flutter/ListView.dart';
+import 'package:start_flutter/Splash_screen.dart';
 import 'package:start_flutter/Stack.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:start_flutter/TextField.dart';
+import 'package:start_flutter/range_sliders.dart';
+import 'package:start_flutter/stack_task.dart';
+import 'package:start_flutter/statefulWidgets_exampleApp.dart';
 
 
 
@@ -24,7 +30,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -45,7 +51,9 @@ class _MyHomePageStatee extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
 
-
+    var n1controllar = TextEditingController();
+    var n2controllar = TextEditingController();
+    var Result = "";
 
 
 
@@ -55,9 +63,110 @@ class _MyHomePageStatee extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('MaX'),
+        title: Text('Flutter_Learning'),
       ),
-      body: TextFieldd(),
+      body: stacktask(),
+
+      //   width: double.infinity,
+      //   color: Colors.deepOrangeAccent,
+      //   child: Center(
+      //     child: Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Column(
+      //         mainAxisAlignment: MainAxisAlignment.center,
+      //         children: [
+      //           TextField(
+      //
+      //             keyboardType: TextInputType.number,
+      //             controller: n1controllar,
+      //
+      //           ),
+      //           TextField(
+      //             keyboardType: TextInputType.number,
+      //             controller: n2controllar,
+      //
+      //           ),
+      //           Container(height: 20,),
+      //
+      //           Padding(
+      //             padding: const EdgeInsets.all(8.0),
+      //             child: Row(
+      //               mainAxisAlignment: MainAxisAlignment.center,
+      //               children: [
+      //                 Padding(
+      //                   padding: const EdgeInsets.all(8.0),
+      //                   child: ElevatedButton(onPressed: (){
+      //                     var no1 = int.parse(n1controllar.text.toString());
+      //                     var no2 = int.parse(n2controllar.text.toString());
+      //
+      //                     var SUM = no1 + no2;
+      //                     Result = "the sum of $no1 and $no2 = $SUM";
+      //
+      //                     setState((){});
+      //
+      //
+      //                   }, child: Text('ADD')),
+      //                 ),
+      //                 Padding(
+      //                   padding: const EdgeInsets.all(8.0),
+      //                   child: ElevatedButton(onPressed: (){
+      //                     var no1 = int.parse(n1controllar.text.toString());
+      //                     var no2 = int.parse(n2controllar.text.toString());
+      //
+      //                     var SUB = no1 - no2;
+      //                     Result = "the sum of $no1 and $no2 = $SUB";
+      //                     setState((){});
+      //                   }, child: Text('SUB')),
+      //                 ),
+      //
+      //               ],
+      //             ),
+      //           ),
+      //           Row(
+      //             mainAxisAlignment: MainAxisAlignment.center,
+      //             children: [
+      //               Padding(
+      //                 padding: const EdgeInsets.all(8.0),
+      //                 child: ElevatedButton(onPressed: (){
+      //                   var no1 = int.parse(n1controllar.text.toString());
+      //                   var no2 = int.parse(n2controllar.text.toString());
+      //
+      //                   var MUL = no1*no2;
+      //                   Result = "the sum of $no1 and $no2 = $MUL";
+      //                   setState((){});
+      //                 }, child: Text('MUL')),
+      //               ),
+      //               Padding(
+      //                 padding: const EdgeInsets.all(8.0),
+      //                 child: ElevatedButton(onPressed: (){
+      //                   var no1 = int.parse(n1controllar.text.toString());
+      //                   var no2 = int.parse(n2controllar.text.toString());
+      //
+      //                   var DIV = no1/no2;
+      //                   Result = "the sum of $no1 and $no2 = $DIV";
+      //                   setState((){});
+      //                 }, child: Text('DIV')),
+      //               ),
+      //             ],
+      //           ),
+      //           Padding(
+      //             padding: const EdgeInsets.all(21),
+      //             child: Text(Result,style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500,color: Colors.black),),
+      //           ),
+      //           ElevatedButton(onPressed: (){
+      //             Navigator.push(context, MaterialPageRoute(builder: (context) {return TextFieldd();},),);
+      //           }, child: Text('next'))
+      //
+      //         ],
+      //
+      //
+      //       ),
+      //     ),
+      //
+      //   ),
+      //
+      //
+      // )
 
       //  body: Container(
       //
