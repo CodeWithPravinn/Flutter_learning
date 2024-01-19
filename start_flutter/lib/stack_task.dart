@@ -3,7 +3,18 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class stacktask  extends StatelessWidget{
+class stacktask  extends StatefulWidget{
+  @override
+  State<stacktask> createState() => _stacktaskState();
+}
+
+class _stacktaskState extends State<stacktask> {
+
+  var myopacity = 1.0;
+  bool invisible = true;
+
+
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -77,10 +88,22 @@ class stacktask  extends StatelessWidget{
                       ),
                     ),
 
+
                   ],
                 ),
               ),
             ),
+            // ElevatedButton(onPressed: (){
+            //   if(invisible){
+            //     myopacity = 0.0;
+            //     invisible = false;
+            //   }
+            //   else{
+            //     myopacity = 1.0;
+            //     invisible = true;
+            //   }
+            // },
+            //     child: Text("discard"))
           ],
         ),
 

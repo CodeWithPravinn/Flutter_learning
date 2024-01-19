@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:start_flutter/Animated_container.dart';
+import 'package:start_flutter/BMI_App.dart';
 import 'package:start_flutter/Callback_Function.dart';
 import 'package:start_flutter/Card.dart';
+import 'package:start_flutter/Cliprrect_Widget.dart';
 import 'package:start_flutter/DatePicker.dart';
 import 'package:start_flutter/Fontawosome_Icons.dart';
 import 'package:start_flutter/GridLayout.dart';
 import 'package:start_flutter/ListTile.dart';
 import 'package:start_flutter/ListView.dart';
+import 'package:start_flutter/Mapping_list.dart';
+import 'package:start_flutter/Shared_Preferences.dart';
 import 'package:start_flutter/Splash_screen.dart';
 import 'package:start_flutter/Stack.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -14,6 +18,8 @@ import 'package:start_flutter/TextField.dart';
 import 'package:start_flutter/range_sliders.dart';
 import 'package:start_flutter/stack_task.dart';
 import 'package:start_flutter/statefulWidgets_exampleApp.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 
 
 
@@ -63,9 +69,9 @@ class _MyHomePageStatee extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter_Learning'),
+        title: Text('Flutter'),
       ),
-      body: stacktask(),
+      body: Mysharedpreferences(),
 
       //   width: double.infinity,
       //   color: Colors.deepOrangeAccent,
